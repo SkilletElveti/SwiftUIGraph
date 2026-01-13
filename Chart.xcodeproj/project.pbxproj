@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		889545CA2F15F636003D1DCB /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889545C92F15F630003D1DCB /* NetworkLayer.swift */; };
+		889545CC2F15F676003D1DCB /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889545CB2F15F663003D1DCB /* ChartViewModel.swift */; };
+		889545CE2F15F7E1003D1DCB /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889545CD2F15F7DD003D1DCB /* JsonParser.swift */; };
 		88BD1CBB2E91CFF50084C28F /* ChartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD1CBA2E91CFF50084C28F /* ChartApp.swift */; };
 		88BD1CBD2E91CFF50084C28F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD1CBC2E91CFF50084C28F /* ContentView.swift */; };
 		88BD1CBF2E91CFF70084C28F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BD1CBE2E91CFF70084C28F /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		889545C92F15F630003D1DCB /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		889545CB2F15F663003D1DCB /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		889545CD2F15F7DD003D1DCB /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 		88BD1CB72E91CFF50084C28F /* Chart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BD1CBA2E91CFF50084C28F /* ChartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartApp.swift; sourceTree = "<group>"; };
 		88BD1CBC2E91CFF50084C28F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 		88BD1CB92E91CFF50084C28F /* Chart */ = {
 			isa = PBXGroup;
 			children = (
+				889545CD2F15F7DD003D1DCB /* JsonParser.swift */,
+				889545CB2F15F663003D1DCB /* ChartViewModel.swift */,
+				889545C92F15F630003D1DCB /* NetworkLayer.swift */,
 				88BD1CBA2E91CFF50084C28F /* ChartApp.swift */,
 				88BD1CBC2E91CFF50084C28F /* ContentView.swift */,
 				88BD1CBE2E91CFF70084C28F /* Assets.xcassets */,
@@ -260,6 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889545CC2F15F676003D1DCB /* ChartViewModel.swift in Sources */,
+				889545CA2F15F636003D1DCB /* NetworkLayer.swift in Sources */,
+				889545CE2F15F7E1003D1DCB /* JsonParser.swift in Sources */,
 				88BD1CBD2E91CFF50084C28F /* ContentView.swift in Sources */,
 				88BD1CBB2E91CFF50084C28F /* ChartApp.swift in Sources */,
 				88BD1CE52E91D08C0084C28F /* ChartView.swift in Sources */,
