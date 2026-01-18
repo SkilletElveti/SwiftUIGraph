@@ -30,7 +30,7 @@ class ChartViewModel: ObservableObject {
             )
             
             // Update state with success
-            state.values = result.values
+            state.values = result.values2
             state.isLoading = false
             print("Data Fetched and loading UI")
         } catch {
