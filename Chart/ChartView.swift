@@ -1,10 +1,9 @@
 import SwiftUI
-
+import OSLog
 struct ChartView: View {
     @StateObject var vm = ChartViewModel()
-    
-    // We remove the static 'data' let and use vm.state.values instead
-    
+
+    private let logger = OSLog(subsystem: Bundle.main.bundleIdentifier ?? "com.app", category: "SwiftUIPerformance")
     var body: some View {
         VStack {
             if vm.state.isLoading {
@@ -27,7 +26,7 @@ struct ChartView: View {
                     Task {
                         await vm.fetchData()
                     }
-                   
+                    
                 })
             } else {
                 Text("No data available")
@@ -81,6 +80,7 @@ struct ChartView: View {
     var chart: some View {
         GeometryReader { geometry in
             Path { path in
+                let startTime = CFAbsoluteTimeGetCurrent()
                 for indexPoint in data.indices {
                     let xPosition = geometry.size.width / CGFloat(data.count) * CGFloat(indexPoint + 1)
                     
@@ -95,6 +95,8 @@ struct ChartView: View {
                         path.addLine(to: CGPoint(x: xPosition, y: yPosition))
                     }
                 }
+                let timeElapsed = (CFAbsoluteTimeGetCurrent() - startTime) * 1000
+                os_log("🎨 SWIFTUI DRAW: Calculated Path for %d points in %.4f msec", log: logger, type: .debug, data.count, timeElapsed)
             }
             .stroke(lineColor, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
             .shadow(color: lineColor, radius: 10, x: 0.0, y: 10)
