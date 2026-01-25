@@ -26,13 +26,13 @@ class ChartViewModel: ObservableObject {
         
         do {
             let result: DoubleResponse = try await NetworkLayer.shared.performRequest(
-                urlString: "http://localhost:3000/api/doubles"
+                urlString: "http://localhost:3006/api/doubles"
             )
             
             // Update state with success
-            state.values = result.values2
+            state.values = result.values
             state.isLoading = false
-            print("Data Fetched and loading UI")
+            print("Data Fetched and loading UI with: \(result.values.count)")
         } catch {
             // Update state with error
             state.isLoading = false

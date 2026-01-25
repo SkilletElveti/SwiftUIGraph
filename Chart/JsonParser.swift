@@ -29,5 +29,5 @@ class JSONParser {
 struct DoubleResponse: Codable {
     let success: Bool
     let count: Int
-    let values2: [Double]
+    let values: [Double]
 }

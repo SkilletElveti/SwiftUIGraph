@@ -23,12 +23,21 @@ struct ChartView: View {
                         charOverlay,
                         alignment: .leading
                     )
+                Button("Refresh",action: {
+                    Task {
+                        await vm.fetchData()
+                    }
+                   
+                })
             } else {
                 Text("No data available")
                     .frame(height: 200)
             }
         }
         .task {
+            Task {
+                
+            }
             await vm.fetchData()
         }
     }
